@@ -25,8 +25,8 @@ const App = () => {
     <div>
       {products.map((product) => (
         <Details
-        key={product.id}
-        id={product.id}
+        key={product._id}
+        id={product._id}
         name={product.name}
         image={product.image}
         image2={product.image2}
