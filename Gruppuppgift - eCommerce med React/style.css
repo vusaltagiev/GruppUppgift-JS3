@@ -2,6 +2,7 @@
   width: 70%;
   margin: auto;
   display: flex;
+  flex-wrap: wrap;
 }
 .product-details .thumbnails {
   display: flex;
@@ -9,17 +10,18 @@
 .product-details .thumbnails img {
   height: 10.3vh;
   margin-inline: 1rem;
-  outline: 1px solid black;
   margin-top: 1rem;
+  cursor: pointer;
 }
 .product-details .display-image img {
   height: 45vh;
-  outline: 1px solid black;
 }
 .product-details .product-information {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  width: 40%;
+  margin-left: 20rem;
 }
 .product-details .product-information h2 {
   font-size: 5rem;
@@ -29,6 +31,33 @@
 }
 .product-details .product-information h3 {
   font-size: 5rem;
+}
+.product-details .product-information .wishlist {
+  margin-left: 5rem;
+  cursor: pointer;
+  margin-top: 3rem;
+}
+.product-details .product-information .colors {
+  display: flex;
+  gap: 1rem;
+}
+.product-details .product-information .colors .color {
+  width: 1vw;
+  height: 2vh;
+  border-radius: 10rem;
+  cursor: pointer;
+}
+.product-details .product-information .colors .red {
+  background-color: red;
+}
+.product-details .product-information .colors .yellow {
+  background-color: yellow;
+}
+.product-details .product-information .colors .blue {
+  background-color: rgb(124, 174, 243);
+}
+.product-details .product-information .colors .black {
+  background-color: black;
 }
 .product-details .product-information .add-to-cart {
   display: flex;
@@ -54,6 +83,34 @@
   padding: 1rem 5rem;
   border: none;
   cursor: pointer;
+}
+.product-details .description-buttons {
+  margin-top: 10rem;
+}
+.product-details .description-buttons button {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  padding: 1.3rem 15rem;
+  border: none;
+  outline: 1px solid rgb(220, 217, 217);
+  background-color: white;
+  cursor: pointer;
+}
+.product-details .description-buttons .description-container {
+  display: flex;
+}
+.product-details .description-buttons h2 {
+  font-size: 4rem;
+  margin-top: 5rem;
+}
+.product-details .description-buttons p {
+  font-size: 2.5rem;
+  margin-top: 3rem;
+  width: 50%;
+}
+.product-details .related-container {
+  font-size: 2.5rem;
+  margin-top: 10rem;
 }
 
 * {

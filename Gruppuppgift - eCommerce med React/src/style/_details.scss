@@ -2,6 +2,7 @@
     width: 70%;
     margin: auto;
     display: flex;
+    flex-wrap: wrap;
     
     .details-images{
     
@@ -12,15 +13,14 @@
         img{
             height: 10.3vh;
             margin-inline: 1rem;
-            outline: 1px solid black;
             margin-top: 1rem;
+            cursor: pointer;
         }
     }
     .display-image{
         
         img{
             height: 45vh;
-            outline: 1px solid black;
         }
     }
     .product-information{
@@ -28,7 +28,9 @@
         display: flex;
         flex-direction: column;
         gap: 3rem;
-        
+        width: 40%;
+        margin-left: 20rem;
+
         h2{
             font-size: 5rem;
         }
@@ -37,6 +39,35 @@
         }
         h3{
             font-size: 5rem;
+        }
+        .wishlist{
+            margin-left: 5rem;
+            cursor: pointer;
+            margin-top: 3rem;
+        }
+
+        .colors{
+            display: flex;
+            gap: 1rem;
+
+            .color{
+                width: 1vw;
+                height: 2vh;
+                border-radius: 10rem;
+                cursor: pointer;
+            }
+            .red{
+                background-color: red;
+            }
+            .yellow{
+                background-color: yellow;
+            }
+            .blue{
+                background-color: rgb(124, 174, 243);
+            }
+            .black{
+                background-color: black;
+            }
         }
         .add-to-cart{
             display: flex;
@@ -63,6 +94,42 @@
                 border: none;
                 cursor: pointer;
             }
+
         }
     }
+
+    .description-buttons{
+        margin-top: 10rem;
+
+        button{
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            padding: 1.3rem 15rem;
+            border: none;
+            outline: 1px solid rgb(220, 217, 217);
+            background-color: white;
+            cursor: pointer;
+        }
+        .description-container{
+            display: flex;
+        }
+        h2{
+            font-size: 4rem;
+            margin-top: 5rem;
+        }
+        p{
+            font-size: 2.5rem;
+            margin-top: 3rem;
+            width: 50%;
+        }
+        image{
+           
+        }
+    }
+
+    .related-container{
+        font-size: 2.5rem;
+        margin-top: 10rem;
+    }
+
 }
