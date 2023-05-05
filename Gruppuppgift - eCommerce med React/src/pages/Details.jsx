@@ -1,7 +1,18 @@
 import {useEffect, useState} from 'react'
 
-const productDetails = ({ name, image, image2, image3, image4, category, price, description, id, product}) => {
+const Details = ({ name, image, image2, image3, image4, category, price, description}) => {
 
+
+  // Displays the image that is clicked
+  const [currentImage, setCurrentImage] = useState(image)
+
+  useEffect(() => {
+    setCurrentImage(image)
+  }, [image])
+
+  const handleThumbnailClick = (e) =>{
+    setCurrentImage(e.target.src)
+  }
 
   return (
     <>
@@ -10,30 +21,30 @@ const productDetails = ({ name, image, image2, image3, image4, category, price, 
       <div className="details-images">
 
         <div className="display-image">
-          <img src={product.image} alt="" />
+          <img src={currentImage} alt={name} />
         </div>
 
         <div className="thumbnails">
 
           <div className="thumbnail-div">
-            <img src={product.image} alt="" />
+            <img src={image} alt={name}  onClick={handleThumbnailClick}/>
           </div>
           <div className="thumbnail-div">
-            <img src={product.image2} alt="" />
+            <img src={image2} alt={name}  onClick={handleThumbnailClick}/>
           </div>
           <div className="thumbnail-div">
-            <img src={product.image3} alt="" />
+            <img src={image3} alt={name}  onClick={handleThumbnailClick}/>
           </div>
           <div className="thumbnail-div">
-            <img src={product.image4} alt="" />
+            <img src={image4} alt={name} onClick={handleThumbnailClick} />
           </div>
         </div>
       </div>
 
       <div className="product-information">
-        <h2>{product.name}</h2>
-        <p>{product.description}</p>
-        <h3>{product.price}</h3>
+        <h2>{name}</h2>
+        <p>{description}</p>
+        <h3>{price}</h3>
         <div className="add-to-cart">
         <button className='btn-quantity'>-</button>
         <input type="number" />
@@ -48,7 +59,7 @@ const productDetails = ({ name, image, image2, image3, image4, category, price, 
           <div className="color blue"></div>
         </div>
         <p className='wishlist'>Add to wishlist</p>
-        <p>{`Category: ${product.category}`}</p>
+        <p>{`Category: ${category}`}</p>
       </div>
 
       <div className="product-description">
@@ -78,7 +89,7 @@ const productDetails = ({ name, image, image2, image3, image4, category, price, 
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum repellat accusantium in earum officia ex ratione laudantium laborum eligendi, eum, asperiores fuga? Repudiandae provident atque dolorem totam veritatis, beatae velit.
             </p>
 
-            <img src={product.image} alt="" />
+            <img src={image} alt="" />
           </div>
         </div>
       </div>
@@ -91,4 +102,4 @@ const productDetails = ({ name, image, image2, image3, image4, category, price, 
   )
 }
 
-export default productDetails
+export default Details
