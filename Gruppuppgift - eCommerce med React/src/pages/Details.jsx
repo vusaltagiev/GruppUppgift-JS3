@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react'
 import Related from '../components/Related'
+import Footer from '../components/Footer'
 
 const Details = ({ name, image, image2, image3, image4, category, price, description}) => {
 
@@ -24,28 +25,6 @@ const Details = ({ name, image, image2, image3, image4, category, price, descrip
     setActiveButton(button)
   }
 
-  const [relatedProducts, setRelatedProducts] = useState([])
-
-
-  useEffect(()  => {
-
-    const randomProducts = async () => {
-      try{
-
-        const res = await fetch('http://localhost:7000/api/products')
-        const data = await res.json()
-        setRelatedProducts(data)
-
-      } catch(error){
-        console.error(error)
-      }
-    }
-    randomProducts()
-  },[])
-
-  const getRandomIndex = (max) => {
-    return Math.floor(Math.random() * max)
-  }
 
   return (
     <>
@@ -170,7 +149,9 @@ const Details = ({ name, image, image2, image3, image4, category, price, descrip
       </div>
 
      <Related/>
+     
     </section>
+    <Footer/>
     </>
   )
 }
