@@ -1,5 +1,5 @@
 .product-details{
-    width: 70%;
+    width: 60%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -11,7 +11,7 @@
         display: flex;
     
         img{
-            height: 10.3vh;
+            height: 8vh;
             margin-inline: 1rem;
             margin-top: 1rem;
             cursor: pointer;
@@ -28,22 +28,31 @@
         display: flex;
         flex-direction: column;
         gap: 3rem;
-        width: 40%;
-        margin-left: 20rem;
+        width: 45%;
+        margin-left: 7rem;
 
         h2{
-            font-size: 5rem;
+            font-size: 1.6rem;
+            margin-bottom: -2rem;
         }
         p{
-            font-size: 3rem;
+            font-size: 1rem;
         }
         h3{
-            font-size: 5rem;
+            font-size: 1.3rem;
+        }
+        hr{
+            margin-block: -1.5rem;
+            border: none;
+            border-top: 2px solid rgb(226, 226, 226);
         }
         .wishlist{
-            margin-left: 5rem;
             cursor: pointer;
-            margin-top: 3rem;
+            border: 1px solid rgb(220, 217, 217); 
+            font-size: .9rem;
+            width: 50%;
+            padding: .4rem;
+            background-color: white;
         }
 
         .colors{
@@ -73,7 +82,7 @@
             display: flex;
 
             .btn-quantity{
-                font-size: 3rem;
+                font-size: 1rem;
                 width: 1.5vw;
                 height: 1.5vw;
                 outline: 1px solid rgb(159, 159, 159);
@@ -84,13 +93,12 @@
                 width: 2vw;
                 border: none;
                 outline: 1px solid rgb(159, 159, 159);
-                font-size: 3rem;
             }
             .btn-add{
-                font-size: 2.5rem;
+                margin-left: 1rem;
                 background-color: red;
                 color: white;
-                padding: 1rem 5rem;
+                padding: .5rem 1.5rem;
                 border: none;
                 cursor: pointer;
             }
@@ -99,12 +107,12 @@
     }
 
     .description-buttons{
-        margin-top: 10rem;
+        margin-top: 4rem;
 
         button{
-            font-size: 2.5rem;
+            font-size: .9rem;
             text-transform: uppercase;
-            padding: 1.3rem 15rem;
+            padding: .7rem 4.9rem;
             border: none;
             outline: 1px solid rgb(220, 217, 217);
             background-color: white;
@@ -115,25 +123,18 @@
             height: 40vh;
         }
         h2{
-            font-size: 4rem;
+            font-size: 1.2rem;
             margin-top: 5rem;
         }
         p{
-            font-size: 2.5rem;
+            font-size: 1rem;
             margin-top: 3rem;
-            width: 50%;
+            width: 70%;
         }
         p.additional{
             width: 90%;
         }
-        image{
-           
-        }
-    }
 
-    .related-container{
-        font-size: 2.5rem;
-        margin-top: 10rem;
     }
 
 }

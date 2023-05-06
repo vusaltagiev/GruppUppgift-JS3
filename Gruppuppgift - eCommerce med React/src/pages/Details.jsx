@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react'
+import Related from '../components/Related'
 
 const Details = ({ name, image, image2, image3, image4, category, price, description}) => {
 
@@ -14,11 +15,36 @@ const Details = ({ name, image, image2, image3, image4, category, price, descrip
     setCurrentImage(e.target.src)
   }
 
+
+
   // Change active button on click and display different HTML
   const [activeButton, setActiveButton] = useState('description')
 
   const handleButtonClick = (button) => {
     setActiveButton(button)
+  }
+
+  const [relatedProducts, setRelatedProducts] = useState([])
+
+
+  useEffect(()  => {
+
+    const randomProducts = async () => {
+      try{
+
+        const res = await fetch('http://localhost:7000/api/products')
+        const data = await res.json()
+        setRelatedProducts(data)
+
+      } catch(error){
+        console.error(error)
+      }
+    }
+    randomProducts()
+  },[])
+
+  const getRandomIndex = (max) => {
+    return Math.floor(Math.random() * max)
   }
 
   return (
@@ -51,6 +77,7 @@ const Details = ({ name, image, image2, image3, image4, category, price, descrip
       <div className="product-information">
         <h2>{name}</h2>
         <p>{description}</p>
+        <hr />
         <h3>{price}</h3>
         <div className="add-to-cart">
         <button className='btn-quantity'>-</button>
@@ -65,7 +92,7 @@ const Details = ({ name, image, image2, image3, image4, category, price, descrip
           <div className="color yellow"></div>
           <div className="color blue"></div>
         </div>
-        <p className='wishlist'>Lägg till på önskelista</p>
+        <button className='wishlist'>Lägg till på önskelista</button>
         <p>{`Kategori: ${category}`}</p>
       </div>
 
@@ -142,9 +169,7 @@ const Details = ({ name, image, image2, image3, image4, category, price, descrip
         </div>
       </div>
 
-      <div className="related-container">
-        <h2>Related Products</h2>
-      </div>
+     <Related/>
     </section>
     </>
   )

@@ -12,7 +12,7 @@ const App = () => {
         const res = await fetch('http://localhost:7000/api/products')
         const data = await res.json()
         setProducts(data)
-
+        
       } catch(error){
         console.error(error)
       }
@@ -20,6 +20,7 @@ const App = () => {
 
     fetchProducts()
   }, [])
+
 
   return (
     <div>
@@ -35,9 +36,8 @@ const App = () => {
         description={product.description}
         category={product.category}
         price={product.price}
-        product={product}
-
-        />
+     
+      />
 
       ))}
     </div>
