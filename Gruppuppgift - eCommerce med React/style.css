@@ -1,0 +1,190 @@
+.product-details {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.product-details .thumbnails {
+  display: flex;
+}
+.product-details .thumbnails img {
+  height: 8vh;
+  margin-inline: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.product-details .display-image img {
+  height: 45vh;
+}
+.product-details .product-information {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 45%;
+  margin-left: 7rem;
+}
+.product-details .product-information h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: -2rem;
+}
+.product-details .product-information p {
+  font-size: 1rem;
+}
+.product-details .product-information h3 {
+  font-size: 1.3rem;
+}
+.product-details .product-information hr {
+  margin-block: -1.5rem;
+  border: none;
+  border-top: 2px solid rgb(226, 226, 226);
+}
+.product-details .product-information .wishlist {
+  cursor: pointer;
+  border: 1px solid rgb(220, 217, 217);
+  font-size: 0.9rem;
+  width: 50%;
+  padding: 0.4rem;
+  background-color: white;
+}
+.product-details .product-information .colors {
+  display: flex;
+  gap: 1rem;
+}
+.product-details .product-information .colors .color {
+  width: 1vw;
+  height: 2vh;
+  border-radius: 10rem;
+  cursor: pointer;
+}
+.product-details .product-information .colors .red {
+  background-color: red;
+}
+.product-details .product-information .colors .yellow {
+  background-color: yellow;
+}
+.product-details .product-information .colors .blue {
+  background-color: rgb(124, 174, 243);
+}
+.product-details .product-information .colors .black {
+  background-color: black;
+}
+.product-details .product-information .add-to-cart {
+  display: flex;
+}
+.product-details .product-information .add-to-cart .btn-quantity {
+  font-size: 1rem;
+  width: 1.7vw;
+  height: 1.5vw;
+  outline: 1px solid rgb(220, 217, 217);
+  border: none;
+  cursor: pointer;
+}
+.product-details .product-information .add-to-cart input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.product-details .product-information .add-to-cart input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 2vw;
+  border: none;
+  outline: 1px solid rgb(220, 217, 217);
+  text-align: center;
+}
+.product-details .product-information .add-to-cart .btn-add {
+  margin-left: 1rem;
+  background-color: red;
+  color: white;
+  padding: 0.6rem 1.5rem;
+  padding-right: 1rem;
+  max-height: 2.2rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+}
+.product-details .product-information .add-to-cart .cart-icon {
+  font-size: 1.3rem;
+  margin-inline: 0.3rem;
+}
+.product-details .description-buttons {
+  margin-top: 4rem;
+}
+.product-details .description-buttons button {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  padding: 0.7rem 4.9rem;
+  border: none;
+  outline: 1px solid rgb(220, 217, 217);
+  background-color: white;
+  cursor: pointer;
+}
+.product-details .description-buttons .description-container {
+  display: flex;
+  height: 40vh;
+}
+.product-details .description-buttons h2 {
+  font-size: 1.2rem;
+  margin-top: 5rem;
+}
+.product-details .description-buttons p {
+  font-size: 1rem;
+  margin-top: 3rem;
+  width: 70%;
+}
+.product-details .description-buttons p.additional {
+  width: 90%;
+}
+
+.btn-red {
+  background-color: red !important;
+  color: white;
+}
+
+.related-container {
+  font-size: 2.5rem;
+  margin-top: 13rem;
+}
+.related-container .related-products {
+  display: flex;
+  gap: 5rem;
+  margin-block: 5rem;
+}
+.related-container .related-products img {
+  height: 20vh;
+}
+.related-container .related-products h3 {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+.related-container .related-products p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+.related-container h2 {
+  font-size: 1.4rem;
+}
+
+footer {
+  background-color: #292929;
+  width: 100%;
+  height: 10vh;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer h3 {
+  color: #A5A5A5;
+  font-size: 0.9rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}/*# sourceMappingURL=style.css.map */
