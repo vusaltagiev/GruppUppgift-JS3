@@ -1,9 +1,19 @@
 import {useEffect, useState} from 'react'
 import Related from '../components/Related'
 import Footer from '../components/Footer'
+import {MdAddShoppingCart} from 'react-icons/md'
 
 const Details = ({ name, image, image2, image3, image4, category, price, description}) => {
 
+  const [quantity, setQuantity] = useState(0)
+
+  const handleQuantityChange = (value) => {
+    const newQuantity = quantity + value
+    if(newQuantity >= 0) {
+      setQuantity(newQuantity)
+    }
+    
+  }
 
   // Displays the image that is clicked
   const [currentImage, setCurrentImage] = useState(image)
@@ -24,6 +34,8 @@ const Details = ({ name, image, image2, image3, image4, category, price, descrip
   const handleButtonClick = (button) => {
     setActiveButton(button)
   }
+
+
 
 
   return (
@@ -59,10 +71,10 @@ const Details = ({ name, image, image2, image3, image4, category, price, descrip
         <hr />
         <h3>{price}</h3>
         <div className="add-to-cart">
-        <button className='btn-quantity'>-</button>
-        <input type="number" />
-        <button className='btn-quantity'>+</button>
-        <button className='btn-add'> Lägg till i kundvagn</button>
+        <button className='btn-quantity' onClick={()=>handleQuantityChange(-1)}>-</button>
+        <input type="number" value={quantity} />
+        <button className='btn-quantity' onClick={()=>handleQuantityChange(1)}>+</button>
+        <button className='btn-add'> Lägg till i kundvagn<MdAddShoppingCart className='cart-icon'/> </button>
         </div>
 
         <div className="colors">
@@ -71,7 +83,7 @@ const Details = ({ name, image, image2, image3, image4, category, price, descrip
           <div className="color yellow"></div>
           <div className="color blue"></div>
         </div>
-        <button className='wishlist'>Lägg till på önskelista</button>
+        <button className='wishlist'>Lägg till på önskelista </button>
         <p>{`Kategori: ${category}`}</p>
       </div>
 
