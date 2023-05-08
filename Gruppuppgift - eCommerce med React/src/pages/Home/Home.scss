@@ -1,0 +1,14 @@
+.home-page {
+  .products-list {
+    display: flex;
+  }
+
+  .product {
+    width: 300px;
+    height: 300px;
+
+    img {
+      width: 300px;
+    }
+  }
+}
