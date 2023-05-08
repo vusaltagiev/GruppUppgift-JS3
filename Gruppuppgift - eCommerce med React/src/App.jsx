@@ -1,47 +1,15 @@
-import {useState, useEffect} from 'react'
-import Details from './pages/Details'
+import Details from "./pages/Details/Details";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home/Home";
+import "./style.scss";
 
 const App = () => {
-
-  
-  const [products, setProducts] = useState([])
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try{
-        const res = await fetch('http://localhost:7000/api/products')
-        const data = await res.json()
-        setProducts(data)
-        
-      } catch(error){
-        console.error(error)
-      }
-    }
-
-    fetchProducts()
-  }, [])
-
-
   return (
-    <div>
-      {products.map((product) => (
-        <Details
-        key={product._id}
-        id={product._id}
-        name={product.name}
-        image={product.image}
-        image2={product.image2}
-        image3={product.image3}
-        image4={product.image4}
-        description={product.description}
-        category={product.category}
-        price={product.price}
-     
-      />
+    <Routes>
+      <Route index element={<Home />} />
+      <Route path="/details/:productId" element={<Details />} />
+    </Routes>
+  );
+};
 
-      ))}
-    </div>
-  )
-}
-
-export default App
+export default App;
