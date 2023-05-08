@@ -2,6 +2,7 @@ import {useEffect, useState} from 'react'
 import Related from '../components/Related'
 import Footer from '../components/Footer'
 import {MdAddShoppingCart} from 'react-icons/md'
+import Product_display from '../components/Product_display'
 
 const Details = ({ name, image, image2, image3, image4, category, price, description}) => {
 
@@ -15,19 +16,6 @@ const Details = ({ name, image, image2, image3, image4, category, price, descrip
     
   }
 
-  // Displays the image that is clicked
-  const [currentImage, setCurrentImage] = useState(image)
-
-  useEffect(() => {
-    setCurrentImage(image)
-  }, [image])
-
-  const handleThumbnailClick = (e) =>{
-    setCurrentImage(e.target.src)
-  }
-
-
-
   // Change active button on click and display different HTML
   const [activeButton, setActiveButton] = useState('description')
 
@@ -36,34 +24,11 @@ const Details = ({ name, image, image2, image3, image4, category, price, descrip
   }
 
 
-
-
   return (
     <>
     <section className='product-details'>
 
-      <div className="details-images">
-
-        <div className="display-image">
-          <img src={currentImage} alt={name} />
-        </div>
-
-        <div className="thumbnails">
-
-          <div className="thumbnail-div">
-            <img src={image} alt={name}  onClick={handleThumbnailClick}/>
-          </div>
-          <div className="thumbnail-div">
-            <img src={image2} alt={name}  onClick={handleThumbnailClick}/>
-          </div>
-          <div className="thumbnail-div">
-            <img src={image3} alt={name}  onClick={handleThumbnailClick}/>
-          </div>
-          <div className="thumbnail-div">
-            <img src={image4} alt={name} onClick={handleThumbnailClick} />
-          </div>
-        </div>
-      </div>
+      <Product_display image={image} image2={image2} image3={image3} image4={image4}/>
 
       <div className="product-information">
         <h2>{name}</h2>
