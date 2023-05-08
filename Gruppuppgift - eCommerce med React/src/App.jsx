@@ -10,18 +10,20 @@ import Contact from "./pages/Contact/Contact";
 
 const App = () => {
   return (
-    <>
+    <div className="app">
       <Header />
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/details/:productId" element={<Details />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" component={<Register />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <main className="app-main">
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/details/:productId" element={<Details />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" component={<Register />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
       <Footer />
-    </>
+    </div>
   );
 };
 
