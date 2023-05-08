@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Header.scss";
 import Logo from "../../images/Logo.svg";
+import { HiShoppingCart } from "react-icons/hi";
 
 const Header = () => {
   return (
@@ -9,12 +10,18 @@ const Header = () => {
         <Link to="/" className="header-logo">
           <img src={Logo} alt="" />
         </Link>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/products">Products</Link>
-          <Link to="/contact">Contact</Link>
-          <Link to="/login">Login</Link>
-        </nav>
+        <div className="header-nav">
+          <nav>
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/products">Products</NavLink>
+            <NavLink to="/contact">Contact</NavLink>
+            <NavLink to="/login">Login</NavLink>
+          </nav>
+          {/* Shopping Cart */}
+          <button className="shopping-cart-button">
+            <HiShoppingCart size={25} />
+          </button>
+        </div>
       </header>
     </div>
   );

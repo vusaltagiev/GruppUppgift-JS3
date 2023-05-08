@@ -19,7 +19,7 @@ const Home = () => {
     fetchProducts();
   }, []);
   return (
-    <div className="home-page">
+    <div className="home-page container">
       <ul className="products-list">
         {products?.map((product, index) => (
           <li key={index} className="product">
