@@ -51,7 +51,7 @@ const Details = () => {
 
   return (
     <>
-      <section className="product-details">
+      <section className="product-details container">
         <div className="details-images">
           <div className="display-image">
             <img src={currentImage || product.image} alt={product?.name} />
@@ -238,7 +238,6 @@ const Details = () => {
 
         <Related />
       </section>
-      <Footer />
     </>
   );
 };
