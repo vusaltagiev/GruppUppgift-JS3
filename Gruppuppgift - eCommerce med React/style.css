@@ -75,9 +75,10 @@
 .product-details .product-information .add-to-cart .btn-quantity {
   font-size: 1rem;
   width: 1.7vw;
-  height: 1.5vw;
+  height: 1.8vw;
   outline: 1px solid rgb(220, 217, 217);
   border: none;
+  background-color: white;
   cursor: pointer;
 }
 .product-details .product-information .add-to-cart input::-webkit-inner-spin-button {
@@ -149,6 +150,9 @@
   display: flex;
   gap: 5rem;
   margin-block: 5rem;
+}
+.related-container .related-products .related-product {
+  cursor: pointer;
 }
 .related-container .related-products img {
   height: 20vh;
