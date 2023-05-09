@@ -1,0 +1,33 @@
+header {
+  padding-block: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .header-nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  nav {
+    display: flex;
+    gap: 2rem;
+
+    a {
+      color: black;
+
+      &.active {
+        color: red;
+      }
+    }
+  }
+
+  .shopping-cart-button {
+    border: 0;
+    background-color: transparent;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+}
