@@ -7,21 +7,25 @@ import Products from "./pages/Products/Products";
 import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
 import Contact from "./pages/Contact/Contact";
-import {ThemeContext} from './contexts/ThemeContext' 
+import { ThemeContext } from "./contexts/ThemeContext";
 import { useState } from "react";
+import ScrollToTop from "./ScrollToTop";
 
 const App = () => {
-  const [theme, setTheme] = useState('light')
+  const [theme, setTheme] = useState("light");
 
   const toggleTheme = () => {
-    setTheme(theme === 'light' ? "dark" : 'light')
-  }
+    setTheme(theme === "light" ? "dark" : "light");
+  };
 
   return (
-    <ThemeContext.Provider value={{theme, setTheme}}>
-      <div className={`app ${theme === 'light' ? 'light-theme' : 'dark-theme'}`}>
-        <Header toggleTheme={toggleTheme}/>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+      <div
+        className={`app ${theme === "light" ? "light-theme" : "dark-theme"}`}
+      >
+        <Header toggleTheme={toggleTheme} />
         <main className="app-main">
+          <ScrollToTop />
           <Routes>
             <Route index element={<Home />} />
             <Route path="/products" element={<Products />} />

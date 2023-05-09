@@ -26,7 +26,7 @@ const Details = () => {
     };
 
     fetchProducts();
-  }, []);
+  }, [productId]);
 
   const handleQuantityChange = (value) => {
     const newQuantity = quantity + value;
@@ -51,7 +51,7 @@ const Details = () => {
 
   return (
     <>
-     <Banner />
+      <Banner />
       <section className="product-details container">
         <div className="details-images">
           <div className="display-image">
