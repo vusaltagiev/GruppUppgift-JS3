@@ -1,47 +1,30 @@
-import {useState, useEffect} from 'react'
-import Details from './pages/Details'
+import Details from "./pages/Details/Details";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home/Home";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import Products from "./pages/Products/Products";
+import Register from "./pages/Register/Register";
+import Login from "./pages/Login/Login";
+import Contact from "./pages/Contact/Contact";
 
 const App = () => {
-
-  
-  const [products, setProducts] = useState([])
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try{
-        const res = await fetch('http://localhost:7000/api/products')
-        const data = await res.json()
-        setProducts(data)
-        
-      } catch(error){
-        console.error(error)
-      }
-    }
-
-    fetchProducts()
-  }, [])
-
-
   return (
-    <div>
-      {products.map((product) => (
-        <Details
-        key={product._id}
-        id={product._id}
-        name={product.name}
-        image={product.image}
-        image2={product.image2}
-        image3={product.image3}
-        image4={product.image4}
-        description={product.description}
-        category={product.category}
-        price={product.price}
-     
-      />
-
-      ))}
+    <div className="app">
+      <Header />
+      <main className="app-main">
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/details/:productId" element={<Details />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" component={<Register />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
