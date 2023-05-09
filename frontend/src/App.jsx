@@ -7,6 +7,11 @@ import Products from "./pages/Products/Products";
 import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
 import Contact from "./pages/Contact/Contact";
+import HeaderAreaElement from "./components/HeaderAreaElement/HeaderAreaElement";
+import HeaderAreaProductSelector from "./components/HeaderAreaProductSelector/HeaderAreaProductSelector";
+import "bootstrap/scss/bootstrap.scss";
+
+
 
 const App = () => {
   return (

@@ -1,0 +1,28 @@
+/*--------------------------------------------------
+    ##Footer
+---------------------------------------------------*/
+.footer-area {
+	padding: 78px 0 21px;
+}
+.footer-bottom {
+	background: #292929;
+	padding: 35.5px 0;
+	.copyright-area {
+		p {
+			margin-bottom: 0;
+			color: #A5A5A5;
+			font-family: var(--heading-font);
+		}
+	}
+}
+.payment-area {
+	ul {
+		margin: 0;
+		padding: 0;
+		li {
+			list-style: none;
+			display: inline-block;
+			margin-left: 2px;
+		}
+	}
+}

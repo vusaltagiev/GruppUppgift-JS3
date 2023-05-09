@@ -1,0 +1,144 @@
+/*---------------------------------------------------
+	widget styles
+----------------------------------------------------*/
+.footer-widget {
+	margin-bottom: 55px;
+	.logo {
+		margin-bottom: 36px;
+    	display: block;
+	}
+	p {
+		color: #757575;
+		font-family: var(--heading-font);
+	}
+}
+.widget {
+	.widget-title {
+		margin-bottom: 41px;
+	}
+}
+.widget_link {
+	ul {
+		padding: 0;
+		margin: 0;
+		li {
+			list-style: none;
+			margin-bottom: 9px;
+			a {
+				color: #757575;
+				font-family: var(--heading-font);
+				display: block;
+				&:hover {
+					margin-left: 5px;
+					color: var(--main-color);
+				}
+			}
+		}
+	}
+}
+.widget_contact {
+	p {
+		margin-bottom: 27px;
+	}
+}
+
+
+.sidebar-area {
+	.widget {
+		margin-bottom: 30px;
+		background: #FAFAFA;
+		border-radius: 0px;
+		text-align: center;
+		&.widget-tags {
+			background: transparent;
+			text-align: left;
+			.widget-title {
+				border-bottom: 0;
+				padding: 0; 
+				margin-top: -6px;
+				margin-bottom: 24px;
+			}
+			.tagcloud {
+				a {
+					font-family: var(--heading-font);
+					background: #FAFAFA;
+					height: 35px;
+					line-height: 35px;
+					display: inline-block;
+					padding: 0 15px;
+					margin-bottom: 7px;
+    				margin-right: 2px;
+    				transition: $transition;
+    				&:hover {
+    					background: var(--main-color);
+    					color: #ffffff;
+    				}
+				}
+			}
+		}
+		.widget-title {
+			font-weight: 600;
+			border-bottom: 1px solid var(--main-color);
+			padding: 15px 0;
+			margin-bottom: 14px;
+		}
+		.list {
+			text-align: left;
+			padding: 9px 25px 12px;
+			li {
+				list-style: none;
+				margin-bottom: 9px;
+				&:hover {
+					i {
+						margin-right: 8px;
+					}
+				}
+				i {
+					color: var(--main-color);
+					transition: $transition;
+					margin-right: 5px;
+				}
+				span {
+					float: right;
+
+				}
+			}
+		}
+	}
+}
+.widget-search {
+	position: relative;
+	.single-search-inner {
+		input {
+			width: 100%;
+		    height: 60px;
+		    border-radius: 0px;
+		    background: #FAFAFA;
+		    border: 1px solid #FAFAFA;
+		    font-family: var(--heading-font);
+		    padding: 0 50px 0 24px;
+		    font-size: 16px;
+		    color: rgba(82, 82, 82, 0.8);
+		    transition: $transition;
+		    &::placeholder {
+		    	color: rgba(82, 82, 82, 0.8);
+		    }
+		    &:hover {
+		    	border: 1px solid var(--main-color);
+		    }
+		}
+		button {
+			border: 0 !important;
+		    background: transparent;
+		    color: var(--main-color);
+		    position: absolute;
+		    right: 24px;
+		    margin-top: -8px;
+		    top: 50%;
+		    display: inline-flex;
+		    font-size: 16px;
+		    padding: 0;
+		    cursor: pointer;
+		}
+	}
+}

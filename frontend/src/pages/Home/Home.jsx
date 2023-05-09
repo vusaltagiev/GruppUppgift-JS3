@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "./Home.scss";
+// import "./Home.scss";
 
 const Home = () => {
   const [products, setProducts] = useState([]);

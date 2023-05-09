@@ -3,7 +3,7 @@ import Related from "../../components/Related/Related";
 import Footer from "../../components/Footer/Footer";
 import { MdAddShoppingCart } from "react-icons/md";
 import { useParams } from "react-router-dom";
-import "./Details.scss";
+// import "./Details.scss";
 
 const Details = () => {
   const [quantity, setQuantity] = useState(0);

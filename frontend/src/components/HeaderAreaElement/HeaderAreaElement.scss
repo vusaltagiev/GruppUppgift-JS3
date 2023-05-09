@@ -1,0 +1,97 @@
+.banner-area {
+	background: #F3F2F2;
+	padding-top: 96px;
+	position: relative;
+	height: 100vh;
+	display: flex;
+    align-items: center;
+	.product-thumbnail-wrapper {
+		position: relative;
+		animation: 1.5s 1.2s fadeInRight both;
+		.single-thumbnail-slider {
+			button {
+				background: #ffffff;
+			    z-index: 9;
+			    width: 50px;
+			    height: 48px;
+			    line-height: 48px;
+			    display: inline-block;
+			    transition: all 0.3s ease-in;
+			    bottom: 0;
+			    top: 50%;
+			    &:hover {
+			    	background: #000000;
+			    	&:before {
+			    		color: #ffffff;
+			    	}
+			    }
+			    &:before {
+				    font-size: 20px;
+				    color: #000000;
+				    font-family: "Font Awesome 5 Free";
+				    font-weight: 700;
+				}
+				&.slick-prev {
+					left: -176.2%;
+					&:before {
+						content: "\f104";
+						margin-left: -3px;
+					}
+				}
+				&.slick-next {
+					right: -27%;
+					&:before {
+						content: "\f105";
+					}
+				}
+			}
+		}
+		.product-thumbnail-carousel {
+			display: inline-block;
+		    position: absolute;
+		    top: 50%;
+		    left: 385px;
+		    margin-top: -150px;
+		    .slick-current {
+		    	.single-thumbnail-item {
+		    		img {
+		    			opacity: 0.16;
+		    		}
+		    	}
+		    }
+			.single-thumbnail-item {
+				width: 121px !important;
+				height: 121px;
+				background: #FFFFFF;
+				border-radius: 50%;
+				line-height: 121px;
+				margin-bottom: 8px;
+				img {
+					cursor: pointer;
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+}
+
+.banner-inner {
+	h6 {
+		font-weight: 400;
+		letter-spacing: 2px;
+		margin-bottom: 27px;
+		animation: 1.5s 0.5s fadeInLeft both;
+	}
+	h1 {
+		font-weight: 700;
+		margin-bottom: 33px;
+		animation: 1.5s 0.9s fadeInLeft both;
+	}
+	.btn {
+		letter-spacing: 2px;
+		height: 55px;
+		line-height: 55px;
+		padding: 0 35px;
+		animation: 1.5s 1.2s fadeInLeft both;
+	}
+}
