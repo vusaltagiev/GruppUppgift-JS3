@@ -1,0 +1,48 @@
+.loginPage {
+    margin-left: 30%;
+
+    .loginForm {
+        width: 100%;
+        margin-top: 10rem;
+    
+        .disclaimer {
+            padding-left: 1rem;
+          }
+          
+          .mb-3 {
+            padding: 1rem;
+          }
+          
+          .LoginLabel {
+            padding-top: 1rem;
+            display: flex;
+          }
+          
+          .LoginLabel p {
+            padding-left: 1rem;
+            font-size: 0.8rem;
+            color: rgb(221, 9, 9);
+            font-weight: 600;
+            padding-top: 0.2rem;
+          }
+          
+          .loginInput {
+            border-radius: 0;
+            border: none;
+            height: 3rem;
+            width: 60%;
+            background-color: rgb(234, 234, 234);
+          }
+          
+          .loginBtn {
+            border-radius: 0;
+            padding: 1rem;
+            font-size: 1rem;
+            width: 8rem;
+            margin-left: 1rem;
+            color: rgb(255, 255, 255);
+            background-color: rgb(237, 76, 76);
+            border: none;
+          }
+    }
+}
