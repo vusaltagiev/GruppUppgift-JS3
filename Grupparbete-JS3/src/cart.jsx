@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { FaShoppingCart } from "react-icons/fa";
 
+
+
 function cartModal() {
   const [isActive, setIsActive] = useState(false);
 
