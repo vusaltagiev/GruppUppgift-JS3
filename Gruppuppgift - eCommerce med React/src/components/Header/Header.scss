@@ -13,6 +13,7 @@ header {
   nav {
     display: flex;
     gap: 2rem;
+    align-items: center;
 
     a {
       color: black;
@@ -20,6 +21,9 @@ header {
       &.active {
         color: red;
       }
+    }
+    .theme-icon{
+      cursor: pointer;
     }
   }
 
