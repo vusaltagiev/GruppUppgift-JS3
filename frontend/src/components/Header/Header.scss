@@ -17,9 +17,10 @@ header {
 
     a {
       color: black;
+      text-transform: uppercase;
 
       &.active {
-        color: red;
+        color: rgb(214, 73, 73);
       }
     }
     .theme-icon{

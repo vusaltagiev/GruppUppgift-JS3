@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import "./Products.scss";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "./Home.scss";
 
-const Home = () => {
+const Products = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const Home = () => {
     fetchProducts();
   }, []);
   return (
-    <div className="home-page container">
+    <div className="container product-page">
       <ul className="products-list">
         {products?.map((product, index) => (
           <li key={index} className="product">
@@ -36,4 +36,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Products;
