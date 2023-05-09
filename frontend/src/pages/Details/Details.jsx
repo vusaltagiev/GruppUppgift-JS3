@@ -3,6 +3,7 @@ import Related from "../../components/Related/Related";
 import { MdAddShoppingCart } from "react-icons/md";
 import { useParams } from "react-router-dom";
 import "./Details.scss";
+import Banner from "../../components/Banner/Banner";
 
 const Details = () => {
   const [quantity, setQuantity] = useState(0);
@@ -50,6 +51,7 @@ const Details = () => {
 
   return (
     <>
+     <Banner />
       <section className="product-details container">
         <div className="details-images">
           <div className="display-image">
@@ -234,7 +236,6 @@ const Details = () => {
             )}
           </div>
         </div>
-
         <Related />
       </section>
     </>
