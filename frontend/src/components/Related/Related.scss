@@ -4,10 +4,13 @@
     margin-top: 13rem;
     
     .related-products{
-
         display: flex;
         gap: 5rem;
         margin-block: 5rem;
+
+        .related-product{
+            cursor: pointer;
+        }
 
         img{
             height: 20vh;
