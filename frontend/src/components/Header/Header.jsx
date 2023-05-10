@@ -16,9 +16,13 @@ const Header = ({ toggleTheme }) => {
   return (
     <div className="header-wrapper">
       <header className="container">
-        <Link to="/" className="header-logo">
-          <img src={Logo} alt="" />
-        </Link>
+        <div className="row">
+          <div className="col-md-6">
+            <Link to="/" className="header-logo">
+              <img src={Logo} alt="" />
+            </Link>
+          </div>
+          <div className="col-md-6">
         <div className="header-nav">
           <nav>
             {
@@ -38,6 +42,8 @@ const Header = ({ toggleTheme }) => {
           <button className="shopping-cart-button">
             <HiShoppingCart size={25} />
           </button>
+          </div>
+          </div>
         </div>
       </header>
     </div>
