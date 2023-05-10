@@ -1,4 +1,4 @@
-import "../../sass/sections/_register.scss";
+import "./Register.scss";
 
 const Register = () => {
   return <div>Register</div>;
