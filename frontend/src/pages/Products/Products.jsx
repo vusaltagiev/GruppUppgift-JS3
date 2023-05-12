@@ -1,23 +1,13 @@
 import "./Products.scss";
-import { useEffect, useState } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { ProductContext } from "../../contexts/ProductContext";
 
 const Products = () => {
-  const [products, setProducts] = useState([]);
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const res = await fetch(`http://localhost:7000/api/products`);
-        const data = await res.json();
-        setProducts(data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
+  const { products } = useContext(ProductContext)
+  
 
-    fetchProducts();
-  }, []);
   return (
     <div className="container product-page">
       <ul className="products-list">
