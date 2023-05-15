@@ -1,6 +1,9 @@
 .product-page {
   .products-list {
-    display: flex;
+    display: grid;
+    padding-bottom: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
   }
 
   .product {
