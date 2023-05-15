@@ -3,14 +3,15 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./style.scss";
 import { BrowserRouter } from "react-router-dom";
-import ProductContextProvider from "./contexts/ProductContext";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
-    <ProductContextProvider>
-      <App />
-    </ProductContextProvider>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );

@@ -31,7 +31,7 @@ img {
 }
 
 .container {
-  width: 60%;
+  width: 80%;
   margin-inline: auto;
 }
 
@@ -43,45 +43,45 @@ li {
   list-style: none;
 }
 
+// Themes
 
-// Themes 
-
-.dark-theme{
+.dark-theme {
   background-color: #1f1f1f;
   color: #fff;
 
-  form, .loginForm{
+  form,
+  .loginForm {
     background-color: #100f0f;
   }
-  p, label{
+  p,
+  label {
     color: #fff;
   }
-  a{
+  a {
     color: #fff;
   }
-  svg{
+  svg {
     color: #fff;
   }
-  img{
+  img {
     color: #fff;
   }
-  .description-buttons button{
+  .description-buttons button {
     outline: 1px solid black;
   }
-  .details-banner{
-
-    p, h4{
+  .details-banner {
+    p,
+    h4 {
       color: #000;
     }
   }
-
 }
 
-.light-theme{
+.light-theme {
   background-color: #fff;
   color: #000;
 
-  a{
+  a {
     color: #000;
   }
 }
