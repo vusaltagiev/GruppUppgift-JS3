@@ -8,10 +8,14 @@ import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
 import Contact from "./pages/Contact/Contact";
 import { ThemeContext } from "./contexts/ThemeContext";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import Profile from "./pages/Profile/Profile";
+import { Navigate } from "react-router-dom";
+import { AuthContext } from "./contexts/AuthContext";
 
 const App = () => {
   const [theme, setTheme] = useState("light");
+  const { user } = useContext(AuthContext);
 
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
@@ -28,6 +32,10 @@ const App = () => {
             <Route index element={<Home />} />
             <Route path="/products" element={<Products />} />
             <Route path="/details/:productId" element={<Details />} />
+            <Route
+              path="/profile"
+              element={user ? <Profile /> : <Navigate to="/" />}
+            />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/contact" element={<Contact />} />
