@@ -1,12 +1,18 @@
 import "./Products.scss";
-import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { ProductContext } from "../../contexts/ProductContext";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { fetchProducts } from "../../redux/productsSlice";
 
 const Products = () => {
+  const dispatch = useDispatch();
 
-  const { products } = useContext(ProductContext)
-  
+  // Use this in other components if you need the products
+  const { products } = useSelector((state) => state.products);
+
+  useEffect(() => {
+    dispatch(fetchProducts());
+  }, []);
 
   return (
     <div className="container product-page">
