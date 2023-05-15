@@ -25,14 +25,14 @@ const Details = () => {
     };
 
     fetchProducts();
-  }, [productId]);
+  }, []);
 
 
 
 
   return (
     <>
-      <Banner />
+     <Banner />
       <section className="product-details container">
         <Display product={product}/>
         <ProductDetails product={product}/>

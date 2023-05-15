@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Related.scss";
-import { Link } from "react-router-dom";
+import {Link} from 'react-router-dom'
 
 const Related = () => {
   const [relatedProducts, setRelatedProducts] = useState([]);
@@ -34,9 +34,8 @@ const Related = () => {
             getRandomProducts(relatedProducts).map((product) => (
               <Link
                 to={`/details/${product._id}`}
-                className="related-product"
-                key={product._id}
-              >
+                className="related-product" 
+                key={product._id}>
                 <img src={product.image} alt="" />
                 <h3>{product.name}</h3>
                 <p>{product.price}</p>
