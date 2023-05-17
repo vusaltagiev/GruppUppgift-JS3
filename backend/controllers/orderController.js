@@ -1,9 +1,15 @@
-const router = require('express').Router()
-const orderModel = require('../models/orderModel')
-const authMiddleware = require('../middleware/authMiddleware')
+const router = require("express").Router();
+const orderModel = require("../models/orderModel");
+const authMiddleware = require("../middleware/authMiddleware");
 
-router.post('/', authMiddleware, orderModel.createOrder)
+router.post("/", authMiddleware, orderModel.createOrder);
 
-router.get('/:id', authMiddleware, orderModel.getOrder)
+router.get("/:id", authMiddleware, orderModel.getAllOrders);
 
-module.exports = router
+router.get("/user", authMiddleware, orderModel.getAllOrdersForUser);
+
+router.get("/:id", authMiddleware, orderModel.getOrderById);
+
+router.patch("/:id", authMiddleware, orderModel.updateStatus);
+
+module.exports = router;
