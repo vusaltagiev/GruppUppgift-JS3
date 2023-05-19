@@ -1,0 +1,14 @@
+.order-card {
+  padding: 1rem;
+  border: 1px solid rgb(234, 234, 234);
+}
+
+.order-product-card {
+  & > div:first-of-type {
+    width: 7rem;
+  }
+}
+
+.order-status {
+  text-transform: capitalize;
+}
