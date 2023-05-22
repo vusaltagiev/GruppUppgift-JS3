@@ -10,6 +10,8 @@ import Cart from "../Cart/Cart";
 
 const Header = ({ toggleTheme }) => {
   const [theme, setTheme] = useState('light')
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const { cartItems } = useSelector((state) => state.cartItems);
 
   const handleToggle = () => {
     toggleTheme()
