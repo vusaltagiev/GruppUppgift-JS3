@@ -6,7 +6,6 @@ import { ProductContext } from "../../contexts/ProductContext";
 const Products = () => {
 
   const { products } = useContext(ProductContext)
-  
 
   return (
     <div className="container product-page">

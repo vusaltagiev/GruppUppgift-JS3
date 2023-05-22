@@ -1,9 +1,19 @@
 import { useState } from 'react';
-import { MdAddShoppingCart } from "react-icons/md";
+import { FaShoppingCart } from "react-icons/fa";
+import { addToCart } from "../CartRelated/cart";
+import { useDispatch } from "react-redux";
 import './ProductDetails.scss'
 
 const ProductDetails = ({ product }) => {
     const [quantity, setQuantity] = useState(0);
+    const dispatch = useDispatch();
+
+    const handleAddToCard = (product, quantity) => {
+      if (quantity > 0) {
+        dispatch(addToCart({ product, quantity }));
+        setQuantity(0);
+      }
+    };
 
     const handleQuantityChange = (value) => {
         const newQuantity = quantity + value;
@@ -32,10 +42,10 @@ const ProductDetails = ({ product }) => {
             >
               +
             </button>
-            <button className="btn-add">
+            <button className="btn-add" onClick={() => handleAddToCard(product, quantity)}>
               {" "}
               Lägg till i kundvagn
-              <MdAddShoppingCart className="cart-icon" />{" "}
+              <FaShoppingCart className="cart-icon" />{" "}
             </button>
           </div>
 

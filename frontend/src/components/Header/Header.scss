@@ -8,6 +8,7 @@ header {
     display: flex;
     gap: 1.5rem;
     align-items: center;
+    justify-content: space-between;
   }
 
   nav {
@@ -23,7 +24,7 @@ header {
         color: rgb(214, 73, 73);
       }
     }
-    .theme-icon{
+    .theme-icon {
       cursor: pointer;
     }
   }
