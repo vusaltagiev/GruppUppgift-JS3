@@ -41,9 +41,12 @@ const Header = ({ toggleTheme }) => {
             <NavLink to="/contact">Contact</NavLink>
             <NavLink to="/login">Login</NavLink>
           </nav>
-          <button className="shopping-cart-button">
-            <FaShoppingCart size={20} />
-          </button>
+          <div className="cart-wrapper">
+                <button className="shopping-cart-button" onClick={() => setIsCartOpen(!isCartOpen)}> 
+                  <FaShoppingCart size={25} />
+                </button>
+                {cartItems.length > 0 && <span>{cartItems.length}</span>} {isCartOpen && <Cart />}
+              </div>
           </div>
           </div>
         </div>
