@@ -7,6 +7,7 @@ import "./style.scss";
 import { BrowserRouter } from "react-router-dom";
 import ProductContextProvider from "./contexts/ProductContext";
 import { AuthContextProvider } from "./contexts/AuthContext";
+import { AuthContextProvider } from "./contexts/AuthContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
