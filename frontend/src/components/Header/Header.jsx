@@ -41,9 +41,8 @@ const Header = ({ toggleTheme }) => {
             <NavLink to="/contact">Contact</NavLink>
             <NavLink to="/login">Login</NavLink>
           </nav>
-          {/* Shopping Cart */}
           <button className="shopping-cart-button">
-            <HiShoppingCart size={25} />
+            <FaShoppingCart size={20} />
           </button>
           </div>
           </div>
