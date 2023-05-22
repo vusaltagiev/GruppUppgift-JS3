@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import './ProductDetails.scss'
 
 const ProductDetails = ({ product }) => {
-    const [quantity, setQuantity] = useState(0);
+    const [quantity, setQuantity] = useState(1);
     const dispatch = useDispatch();
 
     const handleAddToCard = (product, quantity) => {
