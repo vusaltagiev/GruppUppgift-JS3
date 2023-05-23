@@ -7,11 +7,11 @@ import Products from "./pages/Products/Products";
 import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
 import Contact from "./pages/Contact/Contact";
-import { ThemeContext } from "./contexts/ThemeContext";
 import { useContext, useState } from "react";
 import Profile from "./pages/Profile/Profile";
 import { Navigate } from "react-router-dom";
 import { AuthContext } from "./contexts/AuthContext";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   const [theme, setTheme] = useState("light");
@@ -22,28 +22,25 @@ const App = () => {
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
-      <div
-        className={`app ${theme === "light" ? "light-theme" : "dark-theme"}`}
-      >
-        <Header toggleTheme={toggleTheme} />
-        <main className="app-main">
-          <Routes>
-            <Route index element={<Home />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/details/:productId" element={<Details />} />
-            <Route
-              path="/profile"
-              element={user ? <Profile /> : <Navigate to="/" />}
-            />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </ThemeContext.Provider>
+    <div className={`app ${theme === "light" ? "light-theme" : "dark-theme"}`}>
+      <Header toggleTheme={toggleTheme} />
+      <main className="app-main">
+        <ScrollToTop />
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/details/:productId" element={<Details />} />
+          <Route
+            path="/profile"
+            element={user ? <Profile /> : <Navigate to="/" />}
+          />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
   );
 };
 
