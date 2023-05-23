@@ -28,7 +28,6 @@ const Register = () => {
         });
         const { token } = await res.json();
 
-        localStorage.setItem("token", token);
         setUser(jwt_decode(token));
         navigate("/");
       } catch (error) {

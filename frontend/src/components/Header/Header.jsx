@@ -9,14 +9,16 @@ import { useSelector } from "react-redux";
 import Cart from "../Cart/Cart";
 
 const Header = ({ toggleTheme }) => {
-  const [theme, setTheme] = useState('light')
+  const [theme, setTheme] = useState("light");
   const [isCartOpen, setIsCartOpen] = useState(false);
   const { cartItems } = useSelector((state) => state.cartItems);
 
+  const { user } = useContext(AuthContext);
+
   const handleToggle = () => {
-    toggleTheme()
-    setTheme(theme === 'light' ? 'dark' : 'light')
-  }
+    toggleTheme();
+    setTheme(theme === "light" ? "dark" : "light");
+  };
 
   return (
     <div className="header-wrapper">
@@ -28,28 +30,41 @@ const Header = ({ toggleTheme }) => {
             </Link>
           </div>
           <div className="col-md-6">
-        <div className="header-nav">
-          <nav>
-            {
-              theme === 'light' ? (
-
-                <BsMoonFill className="theme-icon" size={19} onClick={handleToggle}/>
-              ): (
-                <BsSunFill className="theme-icon" size={19} onClick={handleToggle}/>
-              )
-            }
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/products">Products</NavLink>
-            <NavLink to="/contact">Contact</NavLink>
-            <NavLink to="/login">Login</NavLink>
-          </nav>
-          <div className="cart-wrapper">
-                <button className="shopping-cart-button" onClick={() => setIsCartOpen(!isCartOpen)}> 
+            <div className="header-nav">
+              <nav>
+                {theme === "light" ? (
+                  <BsMoonFill
+                    className="theme-icon"
+                    size={19}
+                    onClick={handleToggle}
+                  />
+                ) : (
+                  <BsSunFill
+                    className="theme-icon"
+                    size={19}
+                    onClick={handleToggle}
+                  />
+                )}
+                <NavLink to="/">Home</NavLink>
+                <NavLink to="/products">Products</NavLink>
+                <NavLink to="/contact">Contact</NavLink>
+                {!user ? (
+                  <NavLink to="/login">Login</NavLink>
+                ) : (
+                  <NavLink to="/profile">Profile</NavLink>
+                )}
+              </nav>
+              <div className="cart-wrapper">
+                <button
+                  className="shopping-cart-button"
+                  onClick={() => setIsCartOpen(!isCartOpen)}
+                >
                   <FaShoppingCart size={25} />
                 </button>
-                {cartItems.length > 0 && <span>{cartItems.length}</span>} {isCartOpen && <Cart />}
+                {cartItems.length > 0 && <span>{cartItems.length}</span>}{" "}
+                {isCartOpen && <Cart />}
               </div>
-          </div>
+            </div>
           </div>
         </div>
       </header>

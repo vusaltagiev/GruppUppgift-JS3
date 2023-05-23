@@ -16,7 +16,7 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    console.log(email, password);
+
     if (!email || !password) {
       return;
     } else {
@@ -30,7 +30,6 @@ const Login = () => {
         });
         const { token } = await res.json();
 
-        localStorage.setItem("token", token);
         setUser(jwt_decode(token));
 
         navigate("/");
