@@ -30,7 +30,14 @@ const BestCollectionAllProducts = () => {
     />
   ));
 
-  return <div>{productList}</div>;
-};
+  return (
+  <>
+    <div className="gallery-section">
+    <div className="gallery-isotope row">
+      { productList}
+    </div>
+    </div>
+  </>
+ )};
 
 export default BestCollectionAllProducts;
