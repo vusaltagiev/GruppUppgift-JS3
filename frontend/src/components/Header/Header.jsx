@@ -61,7 +61,9 @@ const Header = ({ toggleTheme }) => {
                 >
                   <FaShoppingCart size={25} />
                 </button>
-                {cartItems.length > 0 && <span>{cartItems.length}</span>}{" "}
+                {cartItems.length > 0 && (
+                  <span className="cart-span">{cartItems.length}</span>
+                )}{" "}
                 {isCartOpen && <Cart />}
               </div>
             </div>

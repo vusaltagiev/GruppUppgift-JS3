@@ -10,7 +10,7 @@ const Profile = () => {
   useEffect(() => {
     fetch("http://localhost:7000/orders/user", {
       headers: {
-        Authorization: `Bearer ${localStorage.getItem("token")}`,
+        Authorization: `Bearer ${user.token}`,
       },
     })
       .then((res) => res.json())
@@ -19,17 +19,17 @@ const Profile = () => {
   }, []);
 
   const currentOrders = useMemo(() => {
-    return orders?.filter((o) => o.status !== "delivered");
+    return orders.filter((o) => o.status !== "delivered");
   }, [orders]);
 
   const deliveredOrders = useMemo(() => {
-    return orders?.filter((o) => o.status === "delivered");
+    return orders.filter((o) => o.status === "delivered");
   }, [orders]);
 
   return (
     <div className="container">
       <div className="flex">
-        <p className="user-name">{user?.email}</p>
+        <p className="user-name">{user?.user.email}</p>
         <button onClick={logout} className="logout-btn">
           Logout
         </button>
