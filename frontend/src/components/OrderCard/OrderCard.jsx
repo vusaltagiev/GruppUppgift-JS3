@@ -1,16 +1,17 @@
 import "./OrderCard.scss";
 
 const OrderCard = ({ order }) => {
+  console.log(order);
   return (
     <li className="order-card" key={order._id}>
       <div className="flex">
         <p>
           <b>Status: </b>
-          <span className="order-status">{order.status}</span>
+          <span className="order-status">{order?.status}</span>
         </p>
         <p>
           <b>Order Date: </b>
-          <span>{order.createdAt.split("T")[0]}</span>
+          <span>{order?.createdAt.split("T")[0]}</span>
         </p>
       </div>
       <div>

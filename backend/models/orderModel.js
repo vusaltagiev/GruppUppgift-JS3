@@ -31,7 +31,7 @@ exports.createOrder = (req, res) => {
 };
 
 exports.getAllOrders = (req, res) => {
-  Order.find({ user: req.params.id })
+  Order.find()
     .populate("user")
     .populate("products.product")
     .then((orders) => {

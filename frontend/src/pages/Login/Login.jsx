@@ -30,7 +30,7 @@ const Login = () => {
         });
         const { token } = await res.json();
 
-        setUser(jwt_decode(token));
+        setUser({ user: jwt_decode(token), token: token });
 
         navigate("/");
       } catch (error) {
