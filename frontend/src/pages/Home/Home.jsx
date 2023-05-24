@@ -1,13 +1,15 @@
 import BannerArea from "../../components/BannerArea/BannerArea";
+import BestCollectionAllProducts from "../../components/BestCollectionAllProducts/BestCollectionAllProducts";
 import BestCollectionNav from "../../components/BestCollectionNav/BestCollectionNav";
-import BestCollectionProducts from "../../components/BestCollectionProducts/BestCollectionProducts";
+import DiscountedProducts from "../../components/DiscountedProducts/DiscountedProducts";
 import "./Home.scss";
 
 const Home = () => {
   return <div>
     <BannerArea/>
     <BestCollectionNav/>
-    <BestCollectionProducts/>
+    <BestCollectionAllProducts/>
+    <DiscountedProducts/>
   </div>;
 };
 
