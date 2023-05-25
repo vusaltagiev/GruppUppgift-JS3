@@ -5,8 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const BestCollectionProduct = (props) => {
   return (
     <>
-            <div className="gallery-sizer col-2">
-                <div className="gallery-item">
+        <div className="gallery-sizer col-xl-5">
+            <div className="gallery-item">
                     <div className="product-single-wrap">
                         <div className="thumb">
                             <img src={props.IMG} alt="image" />   
@@ -17,9 +17,9 @@ const BestCollectionProduct = (props) => {
                             <a className="product-cart-btn" href="#"><img src="assets/img/icon/cart.png" alt="img" /></a>
                         </div>
                     </div>
-                </div>
-            </div>
-        </> 
+            </div>   
+        </div>   
+    </> 
     )
 };
 
