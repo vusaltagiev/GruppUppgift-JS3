@@ -3,7 +3,8 @@ const User = require("../schemas/userSchema");
 
 exports.createOrder = (req, res) => {
   const { products } = req.body;
-  const userId = req.user.dataId;
+  console.log(req.body);
+  const userId = req.user.userId;
 
   User.findById(userId)
     .then((user) => {
@@ -13,10 +14,7 @@ exports.createOrder = (req, res) => {
 
       const order = new Order({
         user: userId,
-        products: products.map((product) => ({
-          product: product.product,
-          quantity: product.quantity,
-        })),
+        products: products,
       });
 
       return order.save();
