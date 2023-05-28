@@ -1,77 +1,46 @@
-import React from 'react'
-import './DiscountedProducts.scss'
-import "bootstrap/dist/css/bootstrap.min.css";
-
-
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import HoverWrapDetails from '../HoverWrapDetails/HoverWrapDetails';
 
 const DiscountedProducts = () => {
-  return (
-    <>
-        <div className="discount-product-area bg-pink pd-top-80 pd-bottom-50">
-        <div className="container">
-            <div className="row justify-content-center">
-                <div className="col-lg-4 col-sm-6">
-                    <div className="single-discount-wrap">
-                        <div className="thumb">
-                            <img src="assets/img/discount/1.png" alt="img" />
-                        </div>
-                        <div className="wrap-details">
-                            <h6><a href="#">Woman White Dress</a></h6>
-                            <p><del>$50.00</del>$30.00</p>
-                            <a className="product-cart-btn" href="#"><img src="assets/img/icon/cart.png" alt="img" /></a>
-                        </div>
-                        <div className="hover-wrap-details text-center">
-                            <h6>UP TO SELL</h6>
-                            <h2>50% OFF</h2>
-                            <h4>Get The Best Price</h4>
-                            <p>Get the best daily offer et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren no sea taki</p>
-                            <a href="#">Discover More</a>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-4 col-sm-6">
-                    <div className="single-discount-wrap">
-                        <div className="thumb">
-                            <img src="assets/img/discount/3.png" alt="img" />
-                        </div>
-                        <div className="wrap-details">
-                            <h6><a href="#">Table Lampe - scele tempore</a></h6>
-                            <p><del>$50.00</del>$30.00</p>
-                            <a className="product-cart-btn" href="#"><img src="assets/img/icon/cart.png" alt="img" /></a>
-                        </div>
-                        <div className="hover-wrap-details text-center">
-                            <h6>UP TO SELL</h6>
-                            <h2>50% OFF</h2>
-                            <h4>Get The Best Price</h4>
-                            <p>Get the best daily offer et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren no sea taki</p>
-                            <a href="#">Discover More</a>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-4 col-sm-6">
-                    <div className="single-discount-wrap">
-                        <div className="thumb">
-                            <img src="assets/img/discount/2.png" alt="img" />
-                        </div>
-                        <div className="wrap-details">
-                            <h6><a href="#">Shirt clothing sleeve skirt</a></h6>
-                            <p><del>$50.00</del>$30.00</p>
-                            <a className="product-cart-btn" href="#"><img src="assets/img/icon/cart.png" alt="img" /></a>
-                        </div>
-                        <div className="hover-wrap-details text-center">
-                            <h6>UP TO SELL</h6>
-                            <h2>50% OFF</h2>
-                            <h4>Get The Best Price</h4>
-                            <p>Get the best daily offer et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren no sea taki</p>
-                            <a href="#">Discover More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> 
-    </>
-  )
-}
+  const [products, setProducts] = useState([]);
 
-export default DiscountedProducts
+  useEffect(() => {
+    axios
+      .get('http://localhost:7000/api/products')
+      .then((response) => {
+        setProducts(response.data);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
+  return (
+    <div className="discount-product-area bg-pink-100 pt-5 pb-4">
+      <div className="container">
+        <div className="row justify-content-center">
+          {products.slice(0, 3).map((product, index) => (
+            <div key={product.id} className="col-lg-4 col-md-6">
+              {index === 1 ? (
+                <HoverWrapDetails />
+              ) : (
+                <div className="single-discount-wrap card p-3">
+                  <div className="thumb card-img-top">
+                    <img src={product.image} alt="img" />
+                  </div>
+                  <div className="wrap-details card-body">
+                    <h5>
+                      <a href="#">{product.name}</a>
+                    </h5>
+                    <p>Original Price: {product.price}</p>
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default DiscountedProducts;
