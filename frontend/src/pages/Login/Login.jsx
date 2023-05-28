@@ -55,7 +55,7 @@ const Login = () => {
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label className="LoginLabel">
-            Password* <a href="#">Forgot Your Password ?</a>
+            Password* <Link to="/reset">Forgot Your Password ?</Link>
           </Form.Label>
           <Form.Control
             className="loginInput"

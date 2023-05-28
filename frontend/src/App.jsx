@@ -12,6 +12,7 @@ import Profile from "./pages/Profile/Profile";
 import { Navigate } from "react-router-dom";
 import { AuthContext } from "./contexts/AuthContext";
 import ScrollToTop from "./components/ScrollToTop";
+import Reset from "./pages/Reset/Reset";
 
 const App = () => {
   const [theme, setTheme] = useState("light");
@@ -36,6 +37,7 @@ const App = () => {
           />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/reset" element={<Reset />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
