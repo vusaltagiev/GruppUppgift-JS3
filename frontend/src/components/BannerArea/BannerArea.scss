@@ -1,0 +1,28 @@
+
+.banner-area {
+    background: #F3F2F2;
+    padding: 1vh 5vh 3vh 5vh;
+    position: relative;
+    display: flex;
+    .container-baner {
+        width: 100%;
+        margin: 0 15vh;
+        }
+        h1 {
+            font-weight: 900;
+            white-space: pre-line; 
+            padding-bottom: 30px; 
+        }
+        h6 {
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+        }
+        .btn-banner {
+            background-color:  #fa3150;
+            color: #fff;
+            letter-spacing: 3px;
+            margin-top: 40px;
+            padding: 19px 35px;
+      }
+  }
