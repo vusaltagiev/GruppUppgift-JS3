@@ -3,7 +3,6 @@ const User = require("../schemas/userSchema");
 
 exports.createOrder = (req, res) => {
   const { products } = req.body;
-  console.log(req.body);
   const userId = req.user.userId;
 
   User.findById(userId)
@@ -30,7 +29,7 @@ exports.createOrder = (req, res) => {
 
 exports.getAllOrders = (req, res) => {
   Order.find()
-    .populate("user")
+    .populate("user", ["email"])
     .populate("products.product")
     .then((orders) => {
       res.status(200).json(orders);
