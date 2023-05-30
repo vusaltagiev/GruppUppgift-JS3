@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import HoverWrapDetails from '../HoverWrapDetails/HoverWrapDetails';
+import './DiscountedProducts.scss';
 
 const DiscountedProducts = () => {
   const [products, setProducts] = useState([]);
@@ -19,7 +20,7 @@ const DiscountedProducts = () => {
       <div className="container">
         <div className="row justify-content-center">
           {products.slice(0, 3).map((product, index) => (
-            <div key={product.id} className="col-lg-4 col-md-6">
+            <div key={product.id+product.name} className="col-lg-4 col-md-6">
               {index === 1 ? (
                 <HoverWrapDetails />
               ) : (
@@ -31,7 +32,7 @@ const DiscountedProducts = () => {
                     <h5>
                       <a href="#">{product.name}</a>
                     </h5>
-                    <p>Original Price: {product.price}</p>
+                    <p>{product.price}</p>
                   </div>
                 </div>
               )}

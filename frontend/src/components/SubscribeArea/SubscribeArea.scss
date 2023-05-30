@@ -1,0 +1,32 @@
+.subscribe-wrap {
+	background: #ffffff;
+	padding: 80px 0;
+	border: 1px solid #E1E1E1;
+	.single-subscribe-wrap {
+		position: relative;
+		input {
+			height: 60px;
+			border: 1px solid #E1E1E1;
+			border-radius: 30px;
+			width: 100%;
+			color: #838383;
+			font-size: 16px;
+			padding: 0 320px 0 50px;
+			position: relative;
+			&::placeholder {
+				color: #838383;
+			}
+		}
+		.btn {
+			height: 60px;
+			line-height: 62px;
+			border-radius: 30px;
+			padding: 0 41px;
+			position: absolute;
+			right: 0;
+            color: #838383;
+            background-color: rgb(223, 25, 25);
+            color: #ffffff;
+		}
+	}
+}

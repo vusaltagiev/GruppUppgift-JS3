@@ -1,17 +1,22 @@
 import BannerArea from "../../components/BannerArea/BannerArea";
-import BestCollectionAllProducts from "../../components/BestCollectionAllProducts/BestCollectionAllProducts";
-import BestCollectionNav from "../../components/BestCollectionNav/BestCollectionNav";
+import BestCollection from "../../components/BestCollection/BestCollection";
 import DiscountedProducts from "../../components/DiscountedProducts/DiscountedProducts";
+import SubscribeArea from "../../components/SubscribeArea/SubscribeArea";
+import TopSelling from "../../components/TopSelling/TopSelling";
+
 
 import "./Home.scss";
 
 const Home = () => {
-  return <div>
-    <BannerArea/>
-    <BestCollectionNav/>
-    <BestCollectionAllProducts/>
-    <DiscountedProducts/>
-  </div>;
+  return (
+    <>
+      <BannerArea />
+      <BestCollection />
+      <DiscountedProducts />
+      <TopSelling />
+      <SubscribeArea/>
+    </>
+  );
 };
 
 export default Home;

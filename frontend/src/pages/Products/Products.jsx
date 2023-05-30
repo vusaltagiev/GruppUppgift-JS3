@@ -1,23 +1,17 @@
 import "./Products.scss";
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { getProducts } from "../../store/productsSlice";
 
 const Products = () => {
-  const [products, setProducts] = useState([]);
+  const { products } = useSelector((state) => state.products);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const res = await fetch(`http://localhost:7000/api/products`);
-        const data = await res.json();
-        setProducts(data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
+    dispatch(getProducts());
+  }, [dispatch]);
 
-    fetchProducts();
-  }, []);
   return (
     <div className="container product-page">
       <ul className="products-list">
