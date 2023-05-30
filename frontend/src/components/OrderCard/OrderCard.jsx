@@ -1,6 +1,7 @@
 import "./OrderCard.scss";
 
 const OrderCard = ({ order }) => {
+  console.log(order);
   return (
     <li className="order-card" key={order._id}>
       <div className="flex">
@@ -21,10 +22,10 @@ const OrderCard = ({ order }) => {
           {order.products?.map((p) => (
             <div className="order-product-card flex" key={p._id}>
               <div>
-                <img src={p.product.image} alt="" />
+                <img src={p.product?.image} alt="" />
               </div>
               <div>
-                <b>{p.product.name}</b>
+                <b>{p.product?.name}</b>
                 <p>Quantity: {p.quantity}</p>
               </div>
             </div>
