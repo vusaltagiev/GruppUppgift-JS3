@@ -1,7 +1,6 @@
 import "./OrderCard.scss";
 
 const OrderCard = ({ order }) => {
-  console.log(order);
   return (
     <li className="order-card" key={order._id}>
       <div className="flex">
