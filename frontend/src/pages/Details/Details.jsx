@@ -29,15 +29,19 @@ const Details = () => {
 
   return (
     <>
-      <Banner />
-      <section className="product-details container">
-        <Display product={product} />
-        <ProductDetails product={product} />
-        <ProductInfo product={product} />
-        <Related />
-      </section>
+      {product && (
+        <>
+          <Banner />
+          <section className="product-details container">
+            <Display product={product} />
+            <ProductDetails product={product} />
+            <ProductInfo product={product} />
+            <Related />
+          </section>
+        </>
+      )}
     </>
   );
-};
+}
 
 export default Details;
