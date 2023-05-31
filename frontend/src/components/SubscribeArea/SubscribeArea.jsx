@@ -10,8 +10,8 @@ const SubscribeArea = () => {
               <div className="row justify-content-center">
                 <div className="col-lg-10">
                   <div className="single-subscribe-wrap">
-                    <input type="text" placeholder="Enter your mail here" />
-                    <button className="btn">SUBSCRIBE FOR NEWSLETTER</button>
+                    <input type="text" placeholder="Ange din e-post här" />
+                    <button className="btn">PRENUMERERA PÅ NYHETSBREV</button>
                   </div>
                 </div>
               </div>
