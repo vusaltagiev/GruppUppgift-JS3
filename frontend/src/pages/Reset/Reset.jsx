@@ -8,14 +8,14 @@ const Reset = () => {
   return (
     <div className="container loginPage">
        <Form className="loginForm">
-      <p className="disclaimer">Reset Password</p>
+      <p className="disclaimer">Återställ Lösenord</p>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label className="LoginLabel">E-mail*</Form.Label>
+        <Form.Label className="LoginLabel">E-postadress*</Form.Label>
         <Form.Control className="loginInput" type="email" />
       </Form.Group>
  
       <Button variant="danger" type="submit" className="loginBtn">
-          Submit
+          Skicka
         </Button>
         </Form>
     </div>

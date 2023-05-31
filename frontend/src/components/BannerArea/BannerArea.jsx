@@ -34,10 +34,10 @@ const BannerArea = () => {
         <div className="row">
           <div className="col-lg-7 align-self-center">
             <div className="banner-inner">
-              <h6>WELCOME TO BMARKETO SHOP</h6>
-              <h1>Exclusive Chair gold Collection.</h1>
+              <h6>VÄLKOMMEN TILL BMERKETO SHOP</h6>
+              <h1>Exklusiv Stol guld Samling.</h1>
               <Link className="btn-banner" to="/products">
-                SHOP NOW
+                SHOPPA
               </Link>
             </div>
           </div>

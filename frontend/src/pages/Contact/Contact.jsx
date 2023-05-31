@@ -26,35 +26,35 @@ const Contact = () => {
           <div className="contactWrapper">
             <div className="col-lg-12">
               <form className="contact-form">
-                <h6>Write something</h6>
+                <h6>Kontaka Oss</h6>
                 <div className="row">
                   <div className="col-lg-6">
                     <div className="input-wrap">
-                      <label>Your Name*</label>
+                      <label>Ditt namn*</label>
                       <input type="text" className="input" />
                     </div>
                   </div>
                   <div className="col-lg-6">
                     <div className="input-wrap">
-                      <label>Your Email*</label>
+                      <label>Din E-postadress*</label>
                       <input type="text" className="input" />
                     </div>
                   </div>
                   <div className="col-lg-6">
                     <div className="input-wrap">
-                      <label>Phone Number</label>
+                      <label>Telefonnummer</label>
                       <input type="text" className="input" />
                     </div>
                   </div>
                   <div className="col-lg-6">
                     <div className="input-wrap">
-                      <label>Company (optional)</label>
+                      <label>Företag (frivilligt)</label>
                       <input type="text" className="input" />
                     </div>
                   </div>
                   <div className="col-12">
                     <div className="input-wrap single-textarea-wrap">
-                      <label>Something write*</label>
+                      <label>Skriv Något*</label>
                       <textarea className="input textarea"></textarea>
                     </div>
                     <div className="checkbox">
@@ -63,14 +63,14 @@ const Contact = () => {
                         aria-label="Checkbox for following text input"
                       />
                       <span>
-                        Save my name, email, and website in this browser for the
-                        next time I comment.
+                        Spara mitt namn, e-post och webbplats i den här
+                        webbläsaren till nästa gång jag kommenterar.
                       </span>
                     </div>
                   </div>
                 </div>
                 <a className="contactBtn" href="#">
-                  Submit
+                  Skicka
                 </a>
               </form>
             </div>

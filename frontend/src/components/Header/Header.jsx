@@ -45,13 +45,13 @@ const Header = ({ toggleTheme }) => {
                     onClick={handleToggle}
                   />
                 )}
-                <NavLink to="/">Home</NavLink>
-                <NavLink to="/products">Products</NavLink>
-                <NavLink to="/contact">Contact</NavLink>
+                <NavLink to="/">Hem</NavLink>
+                <NavLink to="/products">Produkter</NavLink>
+                <NavLink to="/contact">Kontakt</NavLink>
                 {!user ? (
                   <NavLink to="/login">Login</NavLink>
                 ) : (
-                  <NavLink to="/profile">Profile</NavLink>
+                  <NavLink to="/profile">Profil</NavLink>
                 )}
               </nav>
               <div className="cart-wrapper">

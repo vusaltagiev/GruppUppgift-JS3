@@ -45,46 +45,46 @@ const Register = () => {
   return (
     <div className="register-page">
       <form className="register-form" onSubmit={handleRegister}>
-        <h2>Register</h2>
+        <h2>Registrera dig</h2>
         <div className="">
           <div className="row mb-2">
             <div className="col">
-              <label htmlFor="firstName">First Name</label>
+              <label htmlFor="firstName">Förnamn</label>
               <input type="text" id="firstName" />
             </div>
             <div className="col">
-              <label htmlFor="lastName">Last Name</label>
+              <label htmlFor="lastName">Efternamn</label>
               <input type="text" id="lastName" />
             </div>
           </div>
           <div className="row mb-2">
             <div className="col">
-              <label htmlFor="streetName">Street Name</label>
+              <label htmlFor="streetName">Gatuadress</label>
               <input type="text" id="streetName" />
             </div>
           </div>
           <div className="row mb-2">
             <div className="col">
-              <label htmlFor="postalCode">Postal Code</label>
+              <label htmlFor="postalCode">Postnummer</label>
               <input type="text" id="postalCode" />
             </div>
             <div className="col">
-              <label htmlFor="city">City</label>
+              <label htmlFor="city">Stad</label>
               <input type="text" id="city" />
             </div>
           </div>
           <div className="row mb-2">
             <div className="col">
-              <label htmlFor="mobile">Mobile</label>
+              <label htmlFor="mobile">Mobilnummer</label>
               <input type="text" id="mobile" />
             </div>
             <div className="col">
-              <label htmlFor="company">Company</label>
+              <label htmlFor="company">Företag</label>
               <input type="text" id="company" />
             </div>
           </div>
           <div className="mb-2">
-            <label htmlFor="email">Email*</label>
+            <label htmlFor="email">E-postadress*</label>
             <input
               required
               type="email"
@@ -93,7 +93,7 @@ const Register = () => {
             />
           </div>
           <div className="mb-2">
-            <label htmlFor="password">Password*</label>
+            <label htmlFor="password">Lösenord*</label>
             <input
               required
               id="password"
@@ -102,7 +102,7 @@ const Register = () => {
             />
           </div>
           <div className="mb-2">
-            <label htmlFor="confirmPassword">Confirm Password*</label>
+            <label htmlFor="confirmPassword">Bekräfta Lösenord*</label>
             <input
               required
               id="confirmPassword"
@@ -112,7 +112,7 @@ const Register = () => {
           </div>
           {error && <p>{error}</p>}
         </div>
-        <button type="submit">Register</button>
+        <button type="submit">Registrera</button>
       </form>
     </div>
   );

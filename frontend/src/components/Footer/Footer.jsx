@@ -3,7 +3,7 @@ import "./Footer.scss";
 const Footer = () => {
   return (
     <footer>
-      <h3> © 2023 bmarketo. All right reserved.</h3>
+      <h3> © 2023 bmarketo. Alla rättigheter reserverade.</h3>
     </footer>
   );
 };

@@ -41,10 +41,10 @@ const Login = () => {
   return (
     <div className="container loginPage">
       <Form className="loginForm" onSubmit={handleLogin}>
-        <p className="disclaimer">Please Login to Your Account</p>
+        <p className="disclaimer">Logga in på ditt konto</p>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label className="LoginLabel">
-            E-mail* <Link to="/register">Don't have a Account yet?</Link>
+            E-postadress* <Link to="/register">Inte Registrerad?</Link>
           </Form.Label>
           <Form.Control
             className="loginInput"
@@ -55,7 +55,7 @@ const Login = () => {
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label className="LoginLabel">
-            Password* <Link to="/reset">Forgot Your Password ?</Link>
+            Lösenord* <Link to="/reset">Glömt ditt Lösenord ?</Link>
           </Form.Label>
           <Form.Control
             className="loginInput"
@@ -64,11 +64,11 @@ const Login = () => {
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Please keep me logged in" />
+          <Form.Check type="checkbox" label="Håll mig inloggad" />
         </Form.Group>
         {error && error}
         <Button variant="danger" type="submit" className="loginBtn">
-          Submit
+          Login
         </Button>
       </Form>
     </div>
