@@ -9,7 +9,7 @@ import ProductInfo from "../../components/ProductInfo/ProductInfo";
 
 const Details = () => {
   const { productId } = useParams();
-  const [product, setProduct] = useState([]);
+  const [product, setProduct] = useState();
 
   useEffect(() => {
     const fetchProducts = async () => {
