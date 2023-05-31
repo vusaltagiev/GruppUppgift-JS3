@@ -52,7 +52,7 @@ const BestCollectionAllProducts = () => {
         <div className="row">
           <div className="col-12 text-center">
             <button className="btn btn-border" onClick={handleLoadMore}>
-              LOAD MORE <FontAwesomeIcon icon={faRedoAlt} />
+              VISA MER <FontAwesomeIcon icon={faRedoAlt} />
             </button>
           </div>
         </div>

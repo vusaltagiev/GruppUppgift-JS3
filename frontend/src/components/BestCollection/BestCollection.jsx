@@ -8,37 +8,34 @@ const BestCollectionNav = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className="section-title text-center">
-              <h2 className="title">Best Collection</h2>
+              <h2 className="title">Våran Samling</h2>
             </div>
           </div>
           <div className="col-lg-12">
             <div className="isotope-filters product-isotope-btn text-center">
               <button className="button pl-0 active" data-filter="*">
-                All
+                Allt
               </button>
               <button className="button" data-filter=".cat-1">
-                Bags
-              </button>
-              <button className="button" data-filter=".cat-2">
-                Dress
+                Väskor
               </button>
               <button className="button" data-filter=".cat-3">
-                Decoration
+                Dekorationer
               </button>
               <button className="button" data-filter=".cat-4">
-                Essentials
+                Väsentligheter
               </button>
               <button className="button" data-filter=".cat-5">
-                Interior
+                Interiör
               </button>
               <button className="button" data-filter=".cat-6">
                 Laptop
               </button>
               <button className="button" data-filter=".cat-7">
-                Mobile
+                Mobil
               </button>
               <button className="button mr-0" data-filter=".cat-8">
-                Beauty
+                Skönhet
               </button>
             </div>
           </div>

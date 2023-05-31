@@ -17,6 +17,17 @@
     margin-bottom: 15px;
   }
   .p-custom {
-    margin-bottom: 20pxpx;
+    margin-bottom: 20px;
+  }
+  div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem ;
+
+    p{
+      font-size: 2rem;
+      font-weight: bold;
+    }
   }
 }

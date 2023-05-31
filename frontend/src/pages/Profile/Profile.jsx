@@ -31,30 +31,30 @@ const Profile = () => {
       <div className="flex">
         <p className="user-name">{user?.user.email}</p>
         <button onClick={logout} className="logout-btn">
-          Logout
+          Logga ut
         </button>
       </div>
       <div className="orders-wrapper">
-        <h4>Current Orders</h4>
+        <h4>Aktuella beställningar</h4>
         <ul className="order-container">
           {currentOrders.length > 0 ? (
             currentOrders.map((order) => (
               <OrderCard order={order} key={order._id} />
             ))
           ) : (
-            <p>No Current Orders</p>
+            <p>Inga aktuella beställningar</p>
           )}
         </ul>
       </div>
       <div>
-        <h4>Delivered Orders</h4>
+        <h4>Levererade beställningar</h4>
         <ul className="order-container">
           {deliveredOrders.length > 0 ? (
             deliveredOrders.map((order) => (
               <OrderCard order={order} key={order._id} />
             ))
           ) : (
-            <p>No Delivered Orders</p>
+            <p>Inga Levererade beställningar</p>
           )}
         </ul>
       </div>

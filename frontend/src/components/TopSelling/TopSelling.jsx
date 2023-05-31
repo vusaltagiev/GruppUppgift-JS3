@@ -24,7 +24,7 @@ const TopSelling = () => {
         <div className="row">
           <div className="col-12">
             <div className="text-center">
-              <h3 className="title">Top selling products this week</h3>
+              <h3 className="title">Mest sålda produkterna denna vecka</h3>
             </div>
           </div>
         </div>
